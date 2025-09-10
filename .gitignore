@@ -1,0 +1,25 @@
+# Java / Spring Boot
+/backend/target/
+*.class
+*.jar
+
+# Maven
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+
+# Node / React
+/frontend/node_modules/
+/frontend/.cache/
+/frontend/build/
+
+# Logs
+*.log
+
+# OS / IDE
+.DS_Store
+/.idea/
+/.vscode/
+
+# application.properties is not stagged
+backend/src/main/resources/application*.properties

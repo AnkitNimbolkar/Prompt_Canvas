@@ -1,4 +1,5 @@
-package com.aiphoto.backend;
+package com.aiphoto.backend.config;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -12,10 +13,11 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:3000") // allow frontend
+                registry.addMapping("/api/**")  // apply only to your API
+                        .allowedOrigins("http://localhost:3000") // allow frontend React app
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true); // optional if you plan to send cookies/auth
             }
         };
     }
