@@ -1,4 +1,4 @@
- # AI Photo Generator 🎨🤖
+ # Prompt Canvas 🎨🤖
 
 A full-stack AI-powered image generator built with **React (frontend)** and **Spring Boot (backend)**.  
 It integrates with the **OpenAI Image Generation API** to create custom images from text prompts.
